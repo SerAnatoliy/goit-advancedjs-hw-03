@@ -7,14 +7,14 @@ const variables = {
     breedSelect: document.querySelector('.js-breed-select'),
     catInfo: document.querySelector('.cat-info'),
     loader: document.querySelector('.loader'),
-    title: document.querySelector('.header_animation'),
+    title: document.querySelector('.animate__animated'),
 }
 
 function showElement(element, isVisible) {
     element.classList.toggle('hidden', !isVisible)
 }
 
-variables.title.classList.add('header_animation', 'animation_zoomInDown')
+variables.title.classList.add('animate__animated', 'animate__zoomInDown')
 variables.title.addEventListener('animationed', () => {
     searchCats()
 })
@@ -22,7 +22,7 @@ variables.title.addEventListener('animationed', () => {
 showElement(variables.breedSelect, false)
 showElement(variables.loader, true)
 
-const slimSelect = new slimSelect({
+const slimSelect = new SlimSelect({
     select: variables.breedSelect,
 })
 
@@ -55,8 +55,8 @@ function markupCats(data) {
        </div>
 </div>`;
 
-    refs.catInfo.innerHTML = cat;
-    showElement(refs.catInfo, true);
+    variables.catInfo.innerHTML = cat;
+    showElement(variables.catInfo, true);
 }
 
 async function searchCats() {
@@ -66,13 +66,13 @@ async function searchCats() {
             console.log(data);
             slimSelect.setData(Array.from(data));
         });
-        showElement(refs.breedSelect, true);
-        refs.breedSelect.addEventListener('change', onSelectCats);
+        showElement(variables.breedSelect, true);
+        variables.breedSelect.addEventListener('change', selectCat);
     } catch (error) {
         iziToast.show({
-            position: 'topRight',
+            position: 'center',
             message: 'Oops! Something went wrong! Try reloading the page!',
         });
     }
-    showElement(refs.loader, false);
+    showElement(variables.loader, false);
 }
