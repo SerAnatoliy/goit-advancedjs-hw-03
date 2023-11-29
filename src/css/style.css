@@ -1,13 +1,15 @@
 :root {
-    --ss-primary-color: teal;
-    --ss-bg-color: #ffffff;
-    --ss-font-color: #4d4d4d;
-    --ss-font-placeholder-color: #8d8d8d;
-    --ss-disabled-color: #dcdee2;
-    --ss-border-color: #dcdee2;
-    --ss-highlight-color: #fffb8c;
-    --ss-success-color: #00b755;
-    --ss-error-color: #dc3545;
+    --primary-brand-color: #4d5ae5;
+    --pressed-state-color: #404bbf;
+    --dark-navy-ble-color: #2e2f42;
+    --green-success-color: #31ddaa;
+    --body-slate-text-color: #434455;
+    --light-slate-subtle-text-color: #8e8f99;
+    --cornflofer-accent-color: #e7e9fc;
+    --cloud-light-color: #f4f4fd;
+    --dairy-modal-color: #FCFCFC;
+    --white-color: #ffffff;
+    --light-grey-color: #e7e7e7;
     --ss-main-height: 30px;
     --ss-content-height: 300px;
     --ss-spacing-l: 7px;
@@ -43,15 +45,15 @@
 
 .animate__animated {
     text-align: center;
-    color: teal;
+    color: var(--primary-brand-color);
 }
 
 h2.animate__animated {
-    color: rgb(254, 254, 254);
+    color: var(--primary-brand-color);
 }
 
 body {
-    background-color: #000;
+    background-color: var(--light-grey-color);
 }
 
 @media screen and (min-width: 375px) {
@@ -59,7 +61,6 @@ body {
         width: 375px;
         margin: 0 auto;
         height: 418px;
-        background-image: url('../images/cat.jpg');
         background-repeat: no-repeat;
         background-size: contain;
         background-position: bottom;
@@ -86,19 +87,19 @@ body {
 
 .cat-info {
     /* padding: 50px 10px; */
-    padding: 300px 10px 30px 10px;
+    padding: 30px 10px 30px 10px;
     margin: 0 auto;
 }
 
 @media screen and (min-width: 768px) {
     .cat-info {
-        padding: 380px 10px 30px 10px
+        padding: 30px 10px 30px 10px
     }
 }
 
 @media screen and (min-width: 1280px) {
     .cat-info {
-        padding: 510px 10px 30px 10px;
+        padding: 30px 10px 30px 10px;
     }
 }
 
@@ -137,10 +138,10 @@ body {
 .info {
     height: 90%;
     width: 300px;
-    background-color: #e1e1e1;
+    background-color: var(--dairy-modal-color);
     display: flex;
     flex-direction: column;
-    border: 1px solid #000;
+    border: 1px solid var(--dark-navy-ble-color);
     padding: 20px;
     border-radius: 15px;
 }
@@ -159,13 +160,13 @@ body {
 
 .name {
     font-size: 30px;
-    color: teal;
+    color: var(--primary-brand-color);
 }
 
 .description,
 .temperament {
     font-size: 18px;
-    color: teal;
+    color: var(--primary-brand-color);
     font-weight: 500;
 }
 
@@ -175,7 +176,7 @@ body {
     height: 68px;
     border-radius: 50%;
     position: relative;
-    border: 3px solid teal;
+    border: 3px solid var(--primary-brand-color);
     box-sizing: border-box;
     animation: rotation 1s linear infinite;
 }
@@ -186,7 +187,7 @@ body {
     position: absolute;
     left: 4px;
     top: 4px;
-    border: 3px solid #fff;
+    border: 3px solid var(--dairy-modal-color);
     width: 12px;
     height: 12px;
     border-radius: 50%;
@@ -229,14 +230,14 @@ p.loader {
     flex-direction: row;
     position: relative;
     user-select: none;
-    color: var(--ss-font-color);
+    color: var(--dark-navy-ble-color);
     min-height: var(--ss-main-height);
     /* width: 100%; */
     padding: var(--ss-spacing-s);
     cursor: pointer;
-    border: 1px solid var(--ss-border-color);
+    border: 1px solid var(--pressed-state-color);
     border-radius: var(--ss-border-radius);
-    background-color: var(--ss-bg-color);
+    background-color: var(--cloud-light-color);
     outline: 0;
     box-sizing: border-box;
     transition: background-color var(--ss-animation-timing);
@@ -257,16 +258,16 @@ p.loader {
 }
 
 .ss-main:focus {
-    box-shadow: 0 0 5px var(--ss-primary-color);
+    box-shadow: 0 0 5px var(--pressed-state-color);
 }
 
 .ss-main.ss-disabled {
-    background-color: var(--ss-disabled-color);
+    background-color: var(--green-success-color);
     cursor: not-allowed;
 }
 
 .ss-main.ss-disabled .ss-values .ss-disabled {
-    color: var(--ss-font-color);
+    color: var(--dairy-modal-color);
 }
 
 .ss-main.ss-disabled .ss-values .ss-value .ss-value-delete {
@@ -297,7 +298,7 @@ p.loader {
     line-height: 1em;
     align-items: center;
     width: 100%;
-    color: var(--ss-font-placeholder-color);
+    color: var(--cloud-light-color);
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap;
@@ -309,10 +310,10 @@ p.loader {
     align-items: center;
     width: fit-content;
     font-size: 12px;
-    color: var(--ss-bg-color);
+    color: var(--dairy-modal-color);
     line-height: 1;
     padding: var(--ss-spacing-s) var(--ss-spacing-m);
-    background-color: var(--ss-primary-color);
+    background-color: var(--dairy-modal-color);
     border-radius: var(--ss-border-radius);
 }
 
@@ -326,7 +327,7 @@ p.loader {
     user-select: none;
     align-items: center;
     width: fit-content;
-    background-color: var(--ss-primary-color);
+    background-color: var(--dairy-modal-color);
     border-radius: var(--ss-border-radius);
     animation-name: ss-valueIn;
     animation-duration: var(--ss-animation-timing);
@@ -342,7 +343,7 @@ p.loader {
 
 .ss-main .ss-values .ss-value .ss-value-text {
     font-size: 12px;
-    color: var(--ss-bg-color);
+    color: var(--dairy-modal-color);
     line-height: 1;
     padding: var(--ss-spacing-s) var(--ss-spacing-m);
 }
@@ -354,7 +355,7 @@ p.loader {
     width: var(--ss-spacing-l);
     padding: var(--ss-spacing-s) var(--ss-spacing-m);
     cursor: pointer;
-    border-left: solid 1px var(--ss-bg-color);
+    border-left: solid 1px var(--dairy-modal-color);
     box-sizing: content-box;
 }
 
@@ -365,7 +366,7 @@ p.loader {
 
 .ss-main .ss-values .ss-value .ss-value-delete svg path {
     fill: none;
-    stroke: var(--ss-bg-color);
+    stroke: var(--dairy-modal-color);
     stroke-width: 18;
     stroke-linecap: round;
     stroke-linejoin: round;
@@ -388,7 +389,7 @@ p.loader {
 
 .ss-main .ss-deselect svg path {
     fill: none;
-    stroke: var(--ss-font-color);
+    stroke: var(--dairy-modal-color);
     stroke-width: 20;
     stroke-linecap: round;
     stroke-linejoin: round;
@@ -406,7 +407,7 @@ p.loader {
 
 .ss-main .ss-arrow path {
     fill: none;
-    stroke: var(--ss-font-color);
+    stroke: var(--dairy-modal-color);
     stroke-width: 18;
     stroke-linecap: round;
     stroke-linejoin: round;
@@ -422,8 +423,8 @@ p.loader {
     width: auto;
     max-height: var(--ss-content-height);
     box-sizing: border-box;
-    border: solid 1px var(--ss-border-color);
-    background-color: var(--ss-bg-color);
+    border: solid 1px var(--primary-brand-color);
+    background-color: var(--dairy-modal-color);
     transition: transform var(--ss-animation-timing),
         opacity var(--ss-animation-timing);
     opacity: 0;
@@ -471,21 +472,21 @@ p.loader {
     min-width: 0px;
     padding: var(--ss-spacing-m) var(--ss-spacing-l);
     margin: 0;
-    border: 1px solid var(--ss-border-color);
+    border: 1px solid var(--primary-brand-color);
     border-radius: var(--ss-border-radius);
-    background-color: var(--ss-bg-color);
+    background-color: var(--dairy-modal-color);
     outline: 0;
     text-align: left;
     box-sizing: border-box;
 }
 
 .ss-content .ss-search input::placeholder {
-    color: var(--ss-font-placeholder-color);
+    color: var(--dairy-modal-color);
     vertical-align: middle;
 }
 
 .ss-content .ss-search input:focus {
-    box-shadow: 0 0 5px var(--ss-primary-color);
+    box-shadow: 0 0 5px var(--dairy-modal-color);
 }
 
 .ss-content .ss-search .ss-addable {
@@ -496,7 +497,7 @@ p.loader {
     flex: 0 0 auto;
     height: auto;
     margin: 0 0 0 var(--ss-spacing-m);
-    border: 1px solid var(--ss-border-color);
+    border: 1px solid var(--pressed-state-color);
     border-radius: var(--ss-border-radius);
 }
 
@@ -512,7 +513,7 @@ p.loader {
 
 .ss-content .ss-search .ss-addable svg path {
     fill: none;
-    stroke: var(--ss-font-color);
+    stroke: var(--dairy-modal-color);
     stroke-width: 18;
     stroke-linecap: round;
     stroke-linejoin: round;
@@ -526,12 +527,12 @@ p.loader {
 }
 
 .ss-content .ss-list .ss-error {
-    color: var(--ss-error-color);
+    color: var(--dark-navy-ble-color);
     padding: var(--ss-spacing-l);
 }
 
 .ss-content .ss-list .ss-searching {
-    color: var(--ss-font-color);
+    color: var(--dark-navy-ble-color);
     padding: var(--ss-spacing-l);
 }
 
@@ -550,7 +551,7 @@ p.loader {
 .ss-content .ss-list .ss-optgroup .ss-optgroup-label .ss-optgroup-label-text {
     flex: 1 1 auto;
     font-weight: bold;
-    color: var(--ss-font-color);
+    color: var(--dark-navy-ble-color);
 }
 
 .ss-content .ss-list .ss-optgroup .ss-optgroup-label:has(.ss-arrow) {
@@ -578,7 +579,7 @@ p.loader {
 }
 
 .ss-content .ss-list .ss-optgroup .ss-optgroup-label .ss-optgroup-actions .ss-selectall.ss-selected svg path {
-    stroke: var(--ss-error-color);
+    stroke: var(--dark-navy-ble-color);
 }
 
 .ss-content .ss-list .ss-optgroup .ss-optgroup-label .ss-optgroup-actions .ss-selectall span {
@@ -599,7 +600,7 @@ p.loader {
 
 .ss-content .ss-list .ss-optgroup .ss-optgroup-label .ss-optgroup-actions .ss-selectall svg path {
     fill: none;
-    stroke: var(--ss-success-color);
+    stroke: var(--green-success-color);
     stroke-linecap: round;
     stroke-linejoin: round;
 }
@@ -627,7 +628,7 @@ p.loader {
 
 .ss-content .ss-list .ss-optgroup .ss-optgroup-label .ss-optgroup-actions .ss-closable .ss-arrow path {
     fill: none;
-    stroke: var(--ss-font-color);
+    stroke: var(--dark-navy-ble-color);
     stroke-width: 18;
     stroke-linecap: round;
     stroke-linejoin: round;
@@ -642,31 +643,31 @@ p.loader {
 .ss-content .ss-list .ss-option {
     display: flex;
     padding: var(--ss-spacing-m) var(--ss-spacing-l) var(--ss-spacing-m) var(--ss-spacing-l);
-    color: var(--ss-font-color);
+    color: var(--dark-navy-ble-color);
     cursor: pointer;
     user-select: none;
 }
 
 .ss-content .ss-list .ss-option:hover {
-    color: var(--ss-bg-color);
-    background-color: var(--ss-primary-color);
+    color: var(--dairy-modal-color);
+    background-color: var(--primary-brand-color);
 }
 
 .ss-content .ss-list .ss-option.ss-highlighted,
 .ss-content .ss-list .ss-option:not(.ss-disabled).ss-selected {
-    color: var(--ss-bg-color);
-    background-color: var(--ss-primary-color);
+    color: var(--dairy-modal-color);
+    background-color: var(--dairy-modal-color);
 }
 
 .ss-content .ss-list .ss-option.ss-disabled {
     cursor: not-allowed;
-    background-color: var(--ss-disabled-color);
+    background-color: var(--cloud-light-color);
 }
 
 .ss-content .ss-list .ss-option.ss-disabled:hover {
-    color: var(--ss-font-color);
+    color: var(--dark-navy-ble-color);
 }
 
 .ss-content .ss-list .ss-option .ss-search-highlight {
-    background-color: var(--ss-highlight-color);
+    background-color: var(--dairy-modal-color);
 }

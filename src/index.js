@@ -14,11 +14,8 @@ function showElement(element, isVisible) {
     element.classList.toggle('hidden', !isVisible)
 }
 
-variables.title.classList.add('animate__animated', 'animate__zoomInDown')
-variables.title.addEventListener('animationed', () => {
-    searchCats()
-})
 
+searchCats()
 showElement(variables.breedSelect, false)
 showElement(variables.loader, true)
 
@@ -69,6 +66,7 @@ async function searchCats() {
         showElement(variables.breedSelect, true);
         variables.breedSelect.addEventListener('change', selectCat);
     } catch (error) {
+        console.log(error)
         iziToast.show({
             position: 'center',
             message: 'Oops! Something went wrong! Try reloading the page!',
